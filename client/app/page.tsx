@@ -1,10 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function Page() {
+export default function IndexPage() {
+  const [result, setResult] = useState<string>("Waiting...");
+
   const handleKey = (e: KeyboardEvent) => {
-    if (e.key == "ArrowUp") console.log("Up");
+    if (e.key == "ArrowUp") {
+      setResult("/\\");
+    } else if (e.key == "ArrowDown") {
+      setResult("\\/");
+    } else if (e.key == "ArrowLeft") {
+      setResult("<");
+    } else if (e.key == "ArrowRight") {
+      setResult(">");
+    }
   };
 
   useEffect(() => {
@@ -12,5 +22,5 @@ export default function Page() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
-  return "Jesus is LORD";
+  return <div className="p-3">{result}</div>;
 }
