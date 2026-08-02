@@ -6,7 +6,7 @@ export default function IndexPage() {
   const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
   const [result, setResult] = useState<string>("Waiting...");
 
-  const handleKey = (e: KeyboardEvent) => {
+  const move = (e: KeyboardEvent) => {
     if (e.key == "ArrowUp") {
       setResult("/\\");
     } else if (e.key == "ArrowDown") {
@@ -19,8 +19,14 @@ export default function IndexPage() {
   };
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
+    window.addEventListener("keydown", move);
+    return () => window.removeEventListener("keydown", move);
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => {
+      const countdown = window.setTimeout(move);
+    }, 1000);
   }, []);
 
   if (!isGameStarted)
@@ -35,6 +41,6 @@ export default function IndexPage() {
       </div>
     );
   else if (isGameStarted) {
-    return <div className="grid grid-cols-12 grid-rows-12"></div>;
+    return <div className="grid grid-cols-12 grid-rows-12">{result}</div>;
   }
 }
