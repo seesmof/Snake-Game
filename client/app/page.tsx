@@ -53,37 +53,47 @@ export default function IndexPage() {
         </CardHeader>
         <CardContent>
           {isGameStarted ? (
-            <div className="grid grid-cols-5 grid-rows-5 gap-1">
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+            <>
+              <div className="grid grid-cols-5 grid-rows-5 gap-1">
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
 
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
 
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
 
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
 
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-              <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-            </div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+              </div>
+
+              <Button
+                className="mt-4"
+                variant="outline"
+                onClick={() => setIsGameStarted(false)}
+              >
+                Зупинити
+              </Button>
+            </>
           ) : (
             <Button onClick={() => setIsGameStarted(true)}>Почати</Button>
           )}
