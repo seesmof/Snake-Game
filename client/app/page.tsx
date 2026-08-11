@@ -17,9 +17,14 @@ export enum Direction {
   RIGHT,
 }
 
+const FIELD_VERTICAL_SIZE = 5;
+const FIELD_HORIZONTAL_SIZE = 5;
+
 export default function IndexPage() {
   const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>(Direction.UP);
+  const [locationX, setLocationX] = useState<number>(2);
+  const [locationY, setLocationY] = useState<number>(2);
 
   const move = (e: KeyboardEvent) => {
     if (e.key == "ArrowUp") {
@@ -55,35 +60,85 @@ export default function IndexPage() {
           {isGameStarted ? (
             <>
               <div className="grid grid-cols-5 grid-rows-5 gap-1">
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
 
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
 
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
 
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
 
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
-                <div className="bg-stone-100 rounded-md p-1 aspect-square"></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
+                <div
+                  className={`bg-stone-100 rounded-md p-1 aspect-square`}
+                ></div>
               </div>
 
               <Button
